@@ -37,7 +37,7 @@ app.use(passport.session());
 
 app.use(
   cors({
-    origin:["https://devdeploy-frontend-cr16ulwhv-ashish-s-projects-f9743213.vercel.app", "https://devdeploy-frontend.vercel.app"],
+    origin:["https://devdeploy-frontend-hujacfcya-ashish-s-projects-f9743213.vercel.app", "https://devdeploy-frontend.vercel.app"],
     methods:"GET,POST,PUT,DELETE",
     credentials:true,
   })
