@@ -37,7 +37,7 @@ app.use(passport.session());
 
 app.use(
   cors({
-    origin:process.env.CLIENT_URL || "http://localhost:3000",
+    origin:process.env.CLIENT_URL || "http://localhost:3000" || "https://devdeploy-h0ml07b5a-ashish-s-projects-f9743213.vercel.app/auth/login/success" || "https://devdeploy-frontend.vercel.app",
     methods:"GET,POST,PUT,DELETE",
     credentials:true,
   })
