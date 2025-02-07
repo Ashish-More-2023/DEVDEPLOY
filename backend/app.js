@@ -19,11 +19,12 @@ app.use(express.json());
 app.use(
   session({
     secret: process.env.SECRETKEY || "JAILOHIT",
-    resave: true,
+    resave: false,
     saveUninitialized: false,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24,
-      secure: false,
+      secure: true,
+      sameSite: 'none',
     },
   })
 );
@@ -40,6 +41,7 @@ app.use(
     origin:["https://devdeploy-frontend-hujacfcya-ashish-s-projects-f9743213.vercel.app", "https://devdeploy-frontend.vercel.app"],
     methods:"GET,POST,PUT,DELETE",
     credentials:true,
+    allowedHeaders:["Content-Type","Authorization"]
   })
 )
 
