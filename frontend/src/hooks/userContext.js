@@ -16,6 +16,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     if(user)return;
     let cancel;
+    axios.defaults.withCredentials = true;
     const fetchUser = async () => {
       try {
         const res = await axios.get(`${BACKEND_URL}auth/login/success`, 
