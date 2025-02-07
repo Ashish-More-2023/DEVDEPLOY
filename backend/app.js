@@ -49,6 +49,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => {
+  res.send('Server is running');
+});
+
 app.use('/user', userRoutes);
 app.use('/project', projectRoutes);
 app.use('/chat',chatRoutes);
