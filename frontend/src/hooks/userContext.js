@@ -21,6 +21,10 @@ export const UserProvider = ({ children }) => {
         const res = await axios.get(`${BACKEND_URL}auth/login/success`, 
         { 
           withCredentials: true,
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
           cancelToken: new axios.CancelToken(c => cancel = c)
         });
         setUser(res.data.user);
